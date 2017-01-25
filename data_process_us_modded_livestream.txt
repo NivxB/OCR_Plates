@@ -1,0 +1,4 @@
+No plate detected on file: 2017-01-25 14:29:58.440449
+No plate detected on file: 2017-01-25 14:30:01.027285
+No plate detected on file: 2017-01-25 14:30:04.068378
+No plate detected on file: 2017-01-25 14:30:06.946652

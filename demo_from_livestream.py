@@ -3,7 +3,8 @@ import os
 import sys
 import re
 import time
-import demo_from_livestream
+import datetime
+import demo_livestream
 import process_image
 
 outFile = open('./data_process_us_modded_livestream.txt','w+')
@@ -16,8 +17,9 @@ if not alpr.is_loaded():
 alpr.set_top_n(3)
 while True:
     start_time = time.time()
-    image = demo_from_livestream.get_from_livestream(0)
-    results = alpr.recognize_array(image)
+    start_time = datetime.datetime.fromtimestamp(start_time)
+    image = demo_livestream.get_from_livestream(0)
+    results = alpr.recognize_array(image.tobytes())
     if (len(results['results']) == 0):
         outFile.write("No plate detected on file: %s" % str(start_time))
         outFile.write("\n")
